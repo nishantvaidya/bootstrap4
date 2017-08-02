@@ -19,6 +19,7 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 node_modules
+*.bak
 
 # Windows shortcuts
 *.lnk
