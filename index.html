@@ -14,27 +14,27 @@
 
 <body>
    <nav class="navbar navbar-inverse navbar-toggleable-sm  fixed-top">
-	<div class="container">
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-	    <span class="navbar-toggler-icon"></span>
-      </button>
-	  <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
-	  <div class="collapse navbar-collapse" id="Navbar">
-	  <ul class="navbar-nav mr-auto">
-	   <li class="navbar-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home </a></li>
-	   <li class="navbar-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About </a></li>
-	   <li class="navbar-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>  Menu </a></li>
-	   <li class="navbar-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact </a></li>
-	  </ul>
-	  <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
-         </span>
-	</div>
-	</div>
+		<div class="container">
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			 <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
+			  <div class="collapse navbar-collapse" id="Navbar">
+				  <ul class="navbar-nav mr-auto">
+				   <li class="navbar-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home </a></li>
+				   <li class="navbar-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About </a></li>
+				   <li class="navbar-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>  Menu </a></li>
+				   <li class="navbar-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact </a></li>
+				  </ul>
+				  <span class="navbar-text">
+								<a data-toggle="modal" data-target="#loginModal">
+								<span class="fa fa-sign-in"></span> Login</a>
+					 </span>
+			</div>
+		</div>
 	</nav>
 	<div id="loginModal" class="modal" role="dailog">
-	 <div class="modal-dailog modal-lg" role="content">
+	 <div class="modal-dialog modal-lg" role="content">
 		<div class="modal-content">
 			<div class="modal-header">
 			<h4 class="modal-title">Login </h4>
@@ -79,9 +79,7 @@
 				<img src="img/logo.png" class="img-fluid"/>
                 </div>
 				<div class= "col col-sm-3  align-self-center">
-				<a role="button" class="btn btn-warning btn-sm text-white btn-block" 
-				data-toggle="tooltip"  data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>" 
-				href="#reserveform" data-placement="bottom">
+				<a role="button" class="btn btn-warning btn-sm text-white btn-block" data-toggle="modal" data-target="#reserveModal">
 				Reserve Table</a>
                 </div>
             </div>
@@ -149,21 +147,20 @@
 
         <div class="container">
 			<div class="row row-content align-item-center">
-            <div class="col-sm-4 col-md-3 flex-first">
-                <h3>This Month's Promotions</h3>
-            </div>
-			<div class="col-sm col-md flex-last">
-            <div class="media">
-			
-			<img class="d-flex mr-3 img-thumbnail align-self-center" src="img/buffet.png" alt="Buffet">
-			<div class="media-body">
-                <h2>Weekend Grand Buffet<span class="badge badge-danger">New</span></h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-            </div>
+				<div class="col-sm-4 col-md-3 flex-first">
+					<h3>This Month's Promotions</h3>
+				</div>
+				<div class="col-sm col-md flex-last">
+					<div class="media">
+						<div class="media-body">
+							<h2 class="mt-0">Weekend Grand Buffet<span class="badge badge-danger">New</span></h2>
+							<p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+						</div>
+						<img class="d-flex mr-3 img-thumbnail align-self-center" src="img/buffet.png" alt="Buffet">
+					</div>
+				</div>
 			</div>
-			</div>
-        </div>
-
+		</div>
         <div class="container">
            <div class="row row-content align-item-center">
 			<div class="col-sm-4 col-md-3 flex-last">
@@ -182,17 +179,19 @@
 			</div>
         </div>
     </div>
-
-    <div class="container" id="reserveform">
-	<div class="row row-content">
-	<div class="card mx-auto">
-	 <h3 class="card-header background-orange text-white"> Reserve a Table</h3>
-	 <div class="card-block">
+	<div id="reserveModal" class="modal" role="dailog" tabindex="-1" role="dialog" aria-labelledby="reserveModalLabel" aria-hidden="true">
+	 <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="reserveModalLabel">Reserve a Table </h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
 				<form>
 				<div class="form-group row">
-				 <label class="col-12 col-sm-2 class-form-label" for="optradio"> Number Of Guests</label>
-                  <div class="col-12 col-sm-6 form-check input-group">
-					<label class="form-check-label form-check-inline">
+					<label class="col-12 col-sm-2 class-form-label" for="optradio"> Number Of Guests</label>
+					<div class="col-12 col-sm-6 form-check input-group pl-0">
+						<label class="form-check-label form-check-inline">
 						  <input type="radio" class="form-check-input" id="optradio" name="optradio">1
 						</label>
 						<label class="form-check-label form-check-inline">
@@ -210,39 +209,45 @@
 						<label class="form-check-label form-check-inline">
 						  <input type="radio" class="form-check-input" id="optradio" name="optradio">6
 						</label>
+					</div>
+				 </div>
+				<div class="form-group row">
+					<label class="col-12 col-sm-2 class-form-label" for="optradio">Sections</label>
+					<div class="btn-group" data-toggle="buttons">
+					  <label class="btn bg-success active">
+					    <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+					  </label>
+					  <label class="btn bg-danger">
+					    <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+					  </label>
+					</div>
+				</div>
+				<div class="form-group row">
+					 <label for="date" class="col-12 col-sm-2  class-form-label" for="date">Date and time</label>
+					<div class="col-12 col-sm-3 pl-0" id="date">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+							<input type="text" class="form-control" id="date" name="date" placeholder="Date">
+						 </div>
+					 </div>
+					 <div class="col-12 col-sm-3">
+						 <div class="input-group">
+							 <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>	
+							<input type="text"  id="time" class="form-control" name="time" placeholder="Time">
 						</div>
 					</div>
-				
-		
+				 </div>
 				<div class="form-group row">
-                 <label for="date" class="col-12 col-sm-2 control-label" >Date and time</label>
-                  <div class="col-12 col-sm-3">
-                    <div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                <input type="text" class="form-control" id="date" name="date" placeholder="Date">
-								
-                         
-                     </div>
-                   </div>
-                   <div class="col-12 col-sm-3">
-				    <div class="input-group">
-							 <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>	
-                            <input type="text"  id="time" class="form-control" name="time" placeholder="Time">
-					</div>
-                     </div>
-                    </div>
-					<div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
-                            <button type="submit" class="btn btn-primary">Reserve</button>
-                        </div>
-                    </div>
-             
-			</form>
+					 <div class="offset-md-2 pl-0 col-md-10">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>	
+						 <button type="submit" class="btn btn-primary">Reserve</button>
+					 </div>
+				</div>
+				</form>
+				</div>
+			</div>
 		</div>
-	 </div>
 	</div>
-	</div>
-
 	<footer class="footer">
         <div class="container">
             <div class="row row-content">             
@@ -288,11 +293,6 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script>
-        $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-         });
-    </script>
 
 </body>
 
