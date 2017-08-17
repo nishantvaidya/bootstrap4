@@ -62,7 +62,7 @@ body{
 label {
     white-space: normal;
 }
-#carouselButtons {
+#carousel-button {
     right:0px;
     position: absolute;
     bottom: 0px;
