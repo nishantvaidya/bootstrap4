@@ -52,6 +52,23 @@ body{
     padding: 10px;
 }
 
+.modal-body {
+   background: $background-pale;
+}
+
+.modal-header {
+   background: $background-dark;
+   color:floralwhite;
+   button {
+	color:floralwhite;
+   }
+}
+
+.modal-footer {
+   background: $background-light; 
+}
+
+
 .carousel {
     background:$background-dark;
 

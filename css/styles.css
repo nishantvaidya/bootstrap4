@@ -37,6 +37,18 @@ body {
   border-bottom: 1px solid #ddd;
   padding: 10px; }
 
+.modal-body {
+  background: #D1C4E9; }
+
+.modal-header {
+  background: #512DA8;
+  color: floralwhite; }
+  .modal-header button {
+    color: floralwhite; }
+
+.modal-footer {
+  background: #9575CD; }
+
 .carousel {
   background: #512DA8; }
   .carousel .carousel-item {

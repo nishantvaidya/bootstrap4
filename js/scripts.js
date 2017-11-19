@@ -14,4 +14,18 @@
                     el.addClass('fa-pause');                    
                 }
             });
+
+			
+			// Code for toggling  the Login and Reservation modals :assignments 4
+
+			$("#loginButton").click(function(){
+				$('#loginModal').modal('toggle');
+			});
+
+			$("#reserveTableButton").click(function(){
+				$('#reserveModal').modal('toggle');
+			});
         });
+
+		
+
